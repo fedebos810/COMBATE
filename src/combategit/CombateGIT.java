@@ -7,7 +7,7 @@ public class CombateGIT {
      */
     public static void main(String[] args) 
     {
-        // hola probando
+        // hola probando hola
     }
     
 }
