@@ -5,10 +5,12 @@
  */
 package combatesi;
 
+import java.util.ArrayList;
+
 
 class Continente 
 {
-    private String name;
+        private String nombre;
 	private ArrayList<Integer> territorios;
 	private int valor;
 	Territorio t;
@@ -24,32 +26,13 @@ class Continente
 		return nombre;
 	}
 	
-	public ArrayList<Integer> getTerritories(){
+	public ArrayList<Integer> getTerritorios(){
 		return territorios;
 	}
 	
-	public int getValue(){
-		return value;
+	public int getValor(){
+		return valor;
 	}
 	
-	public boolean isTerritoryOf(Territory t){
-		return (territories.contains(t.getId()));
-	}
-	
-	public boolean isContinentCaptured(Player p){
-		Vector<Integer> t1 = new Vector<Integer>();
-		Vector<Territory> t2 = p.getOccupiedTerritories();
-                
-		for (int c = 0; c < t2.size(); c++)
-			t1.add(t2.elementAt(c).getId());              
-		for (int i = 0; i < territories.size(); i++){
-                    if(!t1.contains(territories.elementAt(i)))
-			return false;
-		}//end for loop		
-	return true; 
-	}
 
-}
-
-    
 }
